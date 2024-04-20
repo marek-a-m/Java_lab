@@ -1,2 +1,3 @@
 com\mycompany\java_lab_kalkulator\Java_lab_kalkulator.class
 com\mycompany\java_lab_kalkulator\ProstyKalkulator.class
+com\mycompany\java_lab_kalkulator\listeners\OperacjaProstegoKalkulatoraListener.class

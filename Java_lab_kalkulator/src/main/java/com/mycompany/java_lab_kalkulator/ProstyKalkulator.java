@@ -4,6 +4,7 @@
  */
 package com.mycompany.java_lab_kalkulator;
 
+import com.mycompany.java_lab_kalkulator.listeners.OperacjaProstegoKalkulatoraListener;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -24,6 +25,12 @@ public class ProstyKalkulator {
         JTextField firstValue = new JTextField(10);
         JTextField secondValue = new JTextField(10);
         JLabel wynik = new JLabel("...");
+        OperacjaProstegoKalkulatoraListener listener = 
+                new OperacjaProstegoKalkulatoraListener(firstValue, secondValue,wynik);
+        // Dodajemy listener do buttonów
+        plusButton.addActionListener(listener);
+        minusButton.addActionListener(listener);
+        multiplyButton.addActionListener(listener);
         
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(800, 100);
